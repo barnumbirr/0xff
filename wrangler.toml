@@ -1,0 +1,10 @@
+name = "worker-0xff"
+main = "./src/worker.js"
+workers_dev = false
+
+compatibility_date = "2022-07-05"
+account_id = "d2f7937ca605f045ca5b840739a55da7"
+route = { pattern = "0xff.tf/*", zone_name = "0xff.tf" }
+kv_namespaces = [
+    { binding = "kv", id = "5eccac65cde04abab405da30b3329a7d" }
+]

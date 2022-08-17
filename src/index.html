@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>0xff.tf</title>
+    <meta charset="utf-8">
+    <meta name="description" content="0xff.tf">
+    <meta name="robots" content="index, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
+  </head>
+  <style>
+    @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css);
+
+    body {
+      padding: 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 16px;
+      color: #000000;
+      background: #F5F5F5;
+    }
+
+    #content {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #instructions {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    #private {
+      font-size: 13px;
+    }
+
+    code {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    footer {
+      padding: 30px;
+      opacity: 0.7;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      body {
+        color: #F5F5F5;
+        background: #212224;
+      }
+
+      a {
+        color: #58a6ff;
+      }
+    }
+  </style>
+  <body>
+    <div id="content">
+      <h1>0xff.tf</h1>
+
+      <p>A tiny, serverless URL shortener built on Cloudflare Workers and Workers KV.</p>
+
+      <div id="private">
+        <p>
+          <em>Not for public use, requires authentication.</em>
+        </p>
+      </div>
+
+      <div id="instructions">
+        <p>Shorten URL</p>
+        <code>$ curl -X POST -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf/</code>
+
+        <p>Custom short URL</p>
+        <code>$ curl -X PUT -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf/example</code>
+
+        <p>Delete URL</p>
+        <code>$ curl -X DELETE -H "Authorization: $SECRET_KEY" https://0xff.tf/example</code>
+
+        <p>List all URLs</p>
+        <code>$ curl -X GET -H "Authorization: $SECRET_KEY" https://0xff.tf/example</code>
+      </div>
+
+      <h4>Contact</h4>
+
+      <code>root [at] 0xff.tf</code>
+    </div>
+  </body>
+    <footer>
+    <div>&copy; 2022<script>new Date().getFullYear()>2022&&document.write("-"+new Date().getFullYear());</script> 0xff.tf</div>
+    <div><a href="https://github.com/barnumbirr/0xff" target="_blank" rel="noopener noreferrer">Source</a></div>
+  </footer>
+</html>
