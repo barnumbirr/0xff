@@ -2,8 +2,8 @@
 
 A tiny, serverless URL shortener built on Cloudflare Workers and Workers KV.  
 
-Heavily inspired by [Erisa/worker-links](https://github.com/Erisa/worker-links)
-and [VandyHacks/vhl.ink](https://github.com/VandyHacks/vhl.ink).
+Heavily inspired by [`Erisa/worker-links`](https://github.com/Erisa/worker-links)
+and [`VandyHacks/vhl.ink`](https://github.com/VandyHacks/vhl.ink).
 
 ## License
 

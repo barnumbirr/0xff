@@ -62,7 +62,9 @@
     <div id="content">
       <h1>0xff.tf</h1>
 
-      <p>A tiny, serverless URL shortener built on Cloudflare Workers and Workers KV.</p>
+      <p>A tiny, serverless URL shortener built on Cloudflare Workers and Cloudflare Workers KV.</br>
+      An example link might look like this:
+      <a href="https://0xff.tf/about" target="_blank" rel="noopener noreferrer">https://0xff.tf/about</a>.</p>
 
       <div id="private">
         <p>
@@ -72,7 +74,7 @@
 
       <div id="instructions">
         <p>Shorten URL</p>
-        <code>$ curl -X POST -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf/</code>
+        <code>$ curl -X POST -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf</code>
 
         <p>Custom short URL</p>
         <code>$ curl -X PUT -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf/example</code>
@@ -81,7 +83,7 @@
         <code>$ curl -X DELETE -H "Authorization: $SECRET_KEY" https://0xff.tf/example</code>
 
         <p>List all URLs</p>
-        <code>$ curl -X GET -H "Authorization: $SECRET_KEY" https://0xff.tf/example</code>
+        <code>$ curl -X GET -H "Authorization: $SECRET_KEY" https://0xff.tf</code>
       </div>
 
       <h4>Contact</h4>

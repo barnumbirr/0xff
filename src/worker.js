@@ -45,7 +45,7 @@ async function handlePOST(request) {
           status: 400
         }
       );
-    else throw e;
+    throw e;
   };
 
   await kv.put(slug, url);
@@ -146,7 +146,7 @@ async function handleDELETE(request) {
 
   const slug = new URL(request.url).pathname
   const shorturl = new URL(request.url).origin + slug
-  let url = await kv.get(slug)
+  let url = await kv.get(slug);
   if (!url)
     return Response.json(
       {
@@ -157,7 +157,7 @@ async function handleDELETE(request) {
         status: 404,
       }
     );
-  else await kv.delete(slug);
+  await kv.delete(slug);
   return Response.json(
     {
       message: 'URL deleted succesfully.',
@@ -183,8 +183,13 @@ async function handleRequest(request, event) {
       for (let i = 0; i < keys.length; i++) {
         const name = keys[i].name;
         const value = await kv.get(name);
-        keys[i].name = root + keys[i].name
-        keys[i].value = value;
+        const metadata = keys[i].metadata;
+        const expiration = keys[i].expiration;
+
+        keys[i].short = root + keys[i].name;
+        keys[i].long = value;
+        keys[i].metadata = metadata;
+        keys[i].expiration = expiration;
       }
 
       return new Response(JSON.stringify(keys), { status: 200 });
