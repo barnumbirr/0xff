@@ -5,10 +5,52 @@ A tiny, serverless URL shortener built on Cloudflare Workers and Workers KV.
 Heavily inspired by [`Erisa/worker-links`](https://github.com/Erisa/worker-links)
 and [`VandyHacks/vhl.ink`](https://github.com/VandyHacks/vhl.ink).
 
+## Usage
+
+Shorten a URL:
+```bash
+curl -X POST -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf
+```
+
+Custom short URL:
+```bash
+curl -X PUT -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" https://0xff.tf/example
+```
+
+Update target URL:
+```bash
+curl -X PATCH -H "Authorization: $SECRET_KEY" -H "URL: https://new-example.com" https://0xff.tf/example
+```
+
+Delete a URL:
+```bash
+curl -X DELETE -H "Authorization: $SECRET_KEY" https://0xff.tf/example
+```
+
+List all URLs:
+```bash
+curl -X GET -H "Authorization: $SECRET_KEY" https://0xff.tf
+```
+
+Set a TTL (expiration in seconds, minimum 60):
+```bash
+curl -X POST -H "Authorization: $SECRET_KEY" -H "URL: https://example.com" -H "TTL: 86400" https://0xff.tf
+```
+
+Preview a URL (returns JSON instead of redirecting):
+```bash
+curl https://0xff.tf/example?preview
+```
+
+Get a QR code (returns SVG):
+```bash
+curl https://0xff.tf/example.qr
+```
+
 ## License
 
 ```
-Copyright 2022 Martin Simon
+Copyright 2022-2026 Martin Simon
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

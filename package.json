@@ -1,0 +1,25 @@
+{
+  "name": "worker-0xff",
+  "description": "A tiny, serverless URL shortener built on Cloudflare Workers and Workers KV.",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Martin Simon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barnumbirr/0xff.git"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.8.0",
+    "vitest": "^3.0.0",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "qrcode-svg": "^1.1.0"
+  }
+}
