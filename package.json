@@ -15,9 +15,9 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.16.11",
+    "@cloudflare/vitest-pool-workers": "^0.16.18",
     "vitest": "^4.1.8",
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.103.0"
   },
   "dependencies": {
     "qrcode-svg": "^1.1.0"
