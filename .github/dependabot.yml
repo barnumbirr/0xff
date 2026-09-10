@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    ignore:
+      # @cloudflare/vitest-pool-workers 0.22.0 peers on vitest ^4.1.0, so a
+      # vitest major fails `npm ci` outright with ERESOLVE. Drop this entry
+      # once Cloudflare publishes a pool that supports vitest 5.
+      - dependency-name: "vitest"
+        update-types: ["version-update:semver-major"]
     groups:
       npm-security:
         applies-to: security-updates
