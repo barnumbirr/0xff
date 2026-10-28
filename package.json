@@ -17,7 +17,7 @@
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.23.0",
     "vitest": "^4.1.12",
-    "wrangler": "^4.151.1"
+    "wrangler": "^4.152.0"
   },
   "dependencies": {
     "qrcode-svg": "^1.1.0"
